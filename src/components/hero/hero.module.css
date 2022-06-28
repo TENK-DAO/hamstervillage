@@ -12,10 +12,11 @@
   font-size: 4rem;
   line-height: 0.9;
   margin-top: var(--spacing-l);
+  margin-bottom: var(--spacing-xl);
 }
 .content h2 {
   color: var(--accent);
-  margin-top: var(--spacing-m);
+  margin-top: var(--spacing-xl);
   margin-bottom: calc(-1 * var(--spacing-m));
 }
 

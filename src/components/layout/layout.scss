@@ -1,7 +1,7 @@
 @import "./a11y.css";
 @import "./atcb.css";
 @import "../../../config/styles.scss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 $white: white !default;
 $black: black !default;
@@ -21,6 +21,7 @@ $accent: adjust-color($accent, $hue: 90deg) !default;
   /* Font Family */
   --sans: Montserrat, sans-serif;
   --monospace: "Source Code Pro", monospace;
+  --header: 'Gloria Hallelujah', cursive;
 
   /* Font Weights */
   --fw-regular: 400;
@@ -123,6 +124,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--header);
   font-weight: var(--fw-bold);
   margin: 0;
   line-height: var(--lh-headings);
