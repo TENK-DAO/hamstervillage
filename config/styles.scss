@@ -8,5 +8,5 @@ $accent: #ffbd59;
 $secondary: adjust-color($accent, $hue: 90deg);
 
 .roadmap img {
-  max-width: 66%;
+  max-width: 66% !important;
 }
