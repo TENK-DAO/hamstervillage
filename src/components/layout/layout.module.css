@@ -5,3 +5,9 @@
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
+
+.preload {
+  background-image: url(https://bafybeigaq373gbmolcfwykcbnnnergkosh7qe3oimdo3qmffrhc7htft6u.ipfs.dweb.link/101.png);
+  display: hidden !important;
+  width: 100%;
+}

@@ -13,6 +13,7 @@ const Layout: React.FC<{ style?: React.CSSProperties }> = ({ style, children }) 
         <Nav />
         {children}
       </div>
+      <div className={css.preload}></div>
       <Footer />
     </div>
   )
