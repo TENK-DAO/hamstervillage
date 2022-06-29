@@ -1,7 +1,7 @@
 {
   "name": "frontend-starter",
   "private": true,
-  "description": "Template for NFT Launches on TenK",
+  "description": "Template for NFT Launches on TENK DAO",
   "version": "0.1.0",
   "author": "Chad Ostrowski <chad@ahalabs.dev>",
   "dependencies": {

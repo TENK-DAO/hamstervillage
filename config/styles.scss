@@ -7,8 +7,6 @@ $black: #262626;
 $accent: #ffbd59;
 $secondary: adjust-color($accent, $hue: 90deg);
 
-.this-class-is-set-in-i18n-files h1 {
-  /**
-    * You could add other styles like this
-    */
+.roadmap img {
+  max-width: 66%;
 }
