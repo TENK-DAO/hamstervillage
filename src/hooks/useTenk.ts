@@ -1,6 +1,6 @@
 import React from "react"
 import { NftContractMetadata, SaleInfo, Token as RawToken } from "../near/contracts/tenk"
-import { TENK } from "../near/contracts"
+import { tenk } from "../near/contracts"
 import { wallet } from "../near"
 import staleData from "../../stale-data-from-build-time.json"
 
@@ -27,13 +27,13 @@ interface ReturnedData extends TenkData {
 // initialize calls at root of file so that first evaluation of this file causes
 // calls to start, and subsequent imports of this file just use those same calls
 const rpcCalls = Promise.all([
-  TENK.get_sale_info(),
-  TENK.nft_metadata(),
-  TENK.tokens_left(),
-  !account_id ? undefined : TENK.whitelisted({ account_id }),
-  !account_id ? undefined : TENK.remaining_allowance({ account_id }),
-  !account_id ? undefined : TENK.nft_tokens_for_owner({ account_id }),
-  !account_id ? undefined : TENK.mint_rate_limit({ account_id }),
+  tenk.get_sale_info(),
+  tenk.nft_metadata(),
+  tenk.tokens_left(),
+  !account_id ? undefined : tenk.whitelisted({ account_id }),
+  !account_id ? undefined : tenk.remaining_allowance({ account_id }),
+  !account_id ? undefined : tenk.nft_tokens_for_owner({ account_id }),
+  !account_id ? undefined : tenk.mint_rate_limit({ account_id }),
 ])
 
 // Export utility to get data in object form, rather than array form.

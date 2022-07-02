@@ -12,6 +12,8 @@ import * as css from "./hero.module.css"
 
 const currentUser = wallet.getAccountId()
 
+var mintRateLimit = 1;
+
 const Hero: React.FC<{ heroTree: ExpandedHeroTree }> = ({ heroTree }) => {
   const { locale } = useLocales()
   const tenkData = useTenk()
@@ -70,7 +72,7 @@ const Hero: React.FC<{ heroTree: ExpandedHeroTree }> = ({ heroTree }) => {
                     {fill(hero.remaining, data)}
                   </div>
                 </div>
-                {tenkData.mintRateLimit > 1 && (
+                {tenkData.mintRateLimit >= 0 && (
                   <Slider
                     max={Math.min(
                       tenkData.remainingAllowance ?? tenkData.mintRateLimit,

@@ -16,7 +16,7 @@
   "hero": {
     "image": "hero.gif",
     "title": "NFTs drop at SALE_START!",
-    "body": "..it takes a village!",
+    "body": "...it takes a village!",
     "remaining": "REMAINING_COUNT / INITIAL_COUNT left",
     "cta": "Add to Calendar",
     "action": "ADD_TO_CALENDAR(SALE_START)",
@@ -28,14 +28,17 @@
       "vip": {
         "title": "Welcome, CURRENT_USER!",
         "ps": "Pre-mint start: PRESALE_START",
+        "remaining": "REMAINING_COUNT / INITIAL_COUNT left",
         "action": "ADD_TO_CALENDAR(PRESALE_START)"
       }
     },
     "presale": {
       "ps": "Pre-mint started!\n\nGet in on it! [Join our Discord](https://discord.gg/cehMwY7PkY) and request an invite.",
+      "remaining": "REMAINING_COUNT / INITIAL_COUNT left",
       "vip": {
         "title": "Pre-mint started!",
         "body": "Public minting starts at SALE_START",
+        "remaining": "REMAINING_COUNT / INITIAL_COUNT left",
         "ps": "Your remaining pre-mint allowance: MINT_LIMIT",
         "setNumber": "Number to mint",
         "cta": "Mint for MINT_PRICE",
@@ -44,7 +47,7 @@
     },
     "saleOpen": {
       "title": "Minting has begun!",
-      "ps": "",
+      "remaining": "REMAINING_COUNT / INITIAL_COUNT left",
       "setNumber": "Number to mint",
       "cta": "Mint for MINT_PRICE",
       "action": "MINT",

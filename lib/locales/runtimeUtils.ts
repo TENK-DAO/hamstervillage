@@ -2,7 +2,7 @@ import { Gas, NEAR } from 'near-units'
 import { atcb_action as addToCalendar } from 'add-to-calendar-button'
 import settings from '../../config/settings.json'
 import { signIn } from '../../src/near'
-import { TENK } from '../../src/near/contracts'
+import { tenk } from '../../src/near/contracts'
 import { TenkData } from "../../src/hooks/useTenk"
 import { saleStatuses, userStatuses } from './Locale'
 import { Locale } from '../../src/hooks/useLocales'
@@ -71,7 +71,7 @@ const replacers = {
   ),
   MINT_RATE_LIMIT: (d: Data) => d.mintRateLimit,
   INITIAL_COUNT: (d: Data) => formatNumber(d.saleInfo.token_final_supply),
-  REMAINING_COUNT: (d: Data) => formatNumber(d.tokensLeft),
+  REMAINING_COUNT: (d: Data) => formatNumber(d.tokensLeft+88),
 } as const
 
 export const placeholderStrings = Object.keys(replacers)
@@ -118,7 +118,7 @@ const actions = {
     trigger: 'click',
   }),
   'SIGN_IN': signIn,
-  'MINT': (d: Data) => TENK.nft_mint_many({ num: d.numberToMint ?? 1 }, {
+  'MINT': (d: Data) => tenk.nft_mint_many({ num: d.numberToMint ?? 1 }, {
     gas: Gas.parse('40 Tgas').mul(Gas.from('' + d.numberToMint)),
     attachedDeposit: NEAR.from(d.saleInfo.price).mul(NEAR.from('' + d.numberToMint)),
   }),
