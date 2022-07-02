@@ -70,8 +70,8 @@ const replacers = {
     NEAR.from(d.saleInfo.price).mul(NEAR.from('' + (d.numberToMint ?? 1))).toHuman().split(' ')[0]
   ),
   MINT_RATE_LIMIT: (d: Data) => d.mintRateLimit,
-  INITIAL_COUNT: (d: Data) => formatNumber(d.saleInfo.token_final_supply),
-  REMAINING_COUNT: (d: Data) => formatNumber(d.tokensLeft+88),
+  INITIAL_COUNT: (d: Data) => formatNumber(333),
+  REMAINING_COUNT: (d: Data) => formatNumber(d.tokensLeft),
 } as const
 
 export const placeholderStrings = Object.keys(replacers)
